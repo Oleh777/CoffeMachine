@@ -15,8 +15,8 @@ class CoffeeMachine3(
     }
 
     fun action() {
-        println("Write action (buy, fill, take, remaining, exit):")
         loop@ do {
+            println("Write action (buy, fill, take, remaining, exit):")
             val str = readln()
             println()
             when (str) {
@@ -75,7 +75,6 @@ class CoffeeMachine3(
                         else -> println("unknown number of coffee")
                     }
                     println()
-                    println("Write action (buy, fill, take, remaining, exit):")
                 }
 
                 "fill" -> {
@@ -92,19 +91,16 @@ class CoffeeMachine3(
                     coffee += addCoffee
                     cups += addCups
                     println()
-                    println("Write action (buy, fill, take, remaining, exit):")
                 }
 
                 "take" -> {
                     println("I gave you \$$money")
                     money -= money
                     println()
-                    println("Write action (buy, fill, take, remaining, exit):")
                 }
                 "remaining" -> {
                     currentIngredients()
                     println()
-                    println("Write action (buy, fill, take, remaining, exit):")
                 }
                 "exit" -> return
 
